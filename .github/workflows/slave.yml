@@ -2,7 +2,7 @@ name: Slave yml
 
 on:
   workflow_run:
-    workflows: [Upgrade dependencies]
+    workflows: [Master yml]
     types:
       - completed
     branches:
