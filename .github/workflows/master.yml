@@ -1,0 +1,13 @@
+name: Master yml
+
+on:
+  workflow_dispatch:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show github json
+        run: |
+          echo $JSON
