@@ -13,3 +13,5 @@ jobs:
         if: github.event_name == 'pull_request' && !contains(github.head_ref, 'upgrade-dependencies-*')
         run: |
           echo $JSON
+        env:
+          JSON: ${{ toJSON(github) }}
