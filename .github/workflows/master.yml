@@ -9,5 +9,6 @@ jobs:
 
     steps:
       - name: Show github json
+        if: github.event_name == 'pull_request' && !contains(github.head_ref, 'upgrade-dependencies-*')
         run: |
           echo $JSON
